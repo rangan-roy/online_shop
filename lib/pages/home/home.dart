@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:online_shop/pages/category/category_list.dart';
 import 'package:online_shop/widgets/horizontal_box.dart';
 import 'package:get/get.dart';
 
@@ -15,7 +16,8 @@ class Home extends StatelessWidget {
           getHomeButton(
             icon: Icons.category,
             text: 'Categories',
-            page: null,
+            page: CategoryList(),
+            hasDivider: false,
           ),
         ],
       ),
@@ -34,9 +36,9 @@ class Home extends StatelessWidget {
               Text(text),
             ],
           ),
-          onPressed: () => Get.to(page),
+          onPressed: () => Get.to(() => page),
         ),
-        Divider(
+        if(hasDivider) Divider(
           height: 0,
         ),
       ],
