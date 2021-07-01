@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:online_shop/pages/category/category_list.dart';
+import 'package:online_shop/resources/route_names.dart';
+import 'package:online_shop/styles/paddings.dart';
+import 'package:online_shop/widgets/custom_divider.dart';
 import 'package:online_shop/widgets/horizontal_box.dart';
 import 'package:get/get.dart';
 
@@ -11,20 +13,19 @@ class Home extends StatelessWidget {
         title: Text('Home'),
       ),
       body: ListView(
-        padding: EdgeInsets.all(20),
+        padding: Paddings.pagePadding,
         children: <Widget>[
           getHomeButton(
             icon: Icons.category,
             text: 'Categories',
-            page: CategoryList(),
-            hasDivider: false,
+            routeName: RouteNames.categoryHome,
           ),
         ],
       ),
     );
   }
 
-  Column getHomeButton({IconData icon, String text, Widget page, 
+  Column getHomeButton({IconData icon, String text, String routeName, 
       bool hasDivider = true}) {
     return Column(
       children: <Widget>[
@@ -36,11 +37,9 @@ class Home extends StatelessWidget {
               Text(text),
             ],
           ),
-          onPressed: () => Get.to(() => page),
+          onPressed: () => Get.toNamed(routeName),
         ),
-        if(hasDivider) Divider(
-          height: 0,
-        ),
+        if(hasDivider) CustomDivider(0),
       ],
     );
   }
