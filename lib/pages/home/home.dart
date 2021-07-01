@@ -15,7 +15,7 @@ class Home extends StatelessWidget {
       body: ListView(
         padding: Paddings.pagePadding,
         children: <Widget>[
-          getHomeButton(
+          getHomeRow(
             icon: Icons.category,
             text: 'Categories',
             routeName: RouteNames.categoryHome,
@@ -25,7 +25,7 @@ class Home extends StatelessWidget {
     );
   }
 
-  Column getHomeButton({IconData icon, String text, String routeName, 
+  Column getHomeRow({IconData icon, String text, String routeName, 
       bool hasDivider = true}) {
     return Column(
       children: <Widget>[

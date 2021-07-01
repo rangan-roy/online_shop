@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:online_shop/resources/route_names.dart';
 
 class RootCategoryList extends StatelessWidget {
   @override
@@ -9,7 +11,7 @@ class RootCategoryList extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: () {},
+        onPressed: () => Get.toNamed(RouteNames.addEditRootCategory),
       ),
     );
   }
