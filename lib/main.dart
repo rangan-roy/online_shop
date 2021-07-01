@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:online_shop/pages/category/category_home.dart';
+import 'package:online_shop/pages/category/root_category_list.dart';
 import 'package:online_shop/pages/home/home.dart';
 import 'package:online_shop/resources/route_names.dart';
 
@@ -17,6 +18,10 @@ class OnlineShop extends StatelessWidget {
     GetPage(
       name: RouteNames.categoryHome,
       page: () => CategoryHome(),
+    ),
+    GetPage(
+      name: RouteNames.rootCategoryList,
+      page: () => RootCategoryList(),
     ),
   ];
 
