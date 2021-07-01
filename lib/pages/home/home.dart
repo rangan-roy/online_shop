@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:online_shop/widgets/horizontal_box.dart';
+import 'package:get/get.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -33,7 +34,7 @@ class Home extends StatelessWidget {
               Text(text),
             ],
           ),
-          onPressed: () {},
+          onPressed: () => Get.to(page),
         ),
         Divider(
           height: 0,
