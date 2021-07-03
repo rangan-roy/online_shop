@@ -1,3 +1,4 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:online_shop/pages/category/add_edit_root_category.dart';
@@ -6,7 +7,9 @@ import 'package:online_shop/pages/category/root_category_list.dart';
 import 'package:online_shop/pages/home/home.dart';
 import 'package:online_shop/resources/route_names.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(OnlineShop());
 }
 

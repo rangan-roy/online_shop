@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:online_shop/models/root_category.dart';
 import 'package:online_shop/resources/route_names.dart';
 
 class RootCategoryList extends StatelessWidget {
@@ -11,7 +12,10 @@ class RootCategoryList extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add),
-        onPressed: () => Get.toNamed(RouteNames.addEditRootCategory),
+        onPressed: () => Get.toNamed(
+          RouteNames.addEditRootCategory,
+          arguments: RootCategory(),
+        ),
       ),
     );
   }
